@@ -2,6 +2,7 @@
 Platformer Game
 """
 import open_color, arcade
+import pyglet
 
 # Constants
 SCREEN_WIDTH = 800
@@ -78,6 +79,9 @@ class MyGame(arcade.Window):
         self.player_sprite.center_y = 96
         self.player_sprite.center_x = 64
         self.player_list.append(self.player_sprite)
+        song = pyglet.media.load('Happy.mp3')
+        song.play()
+        pyglet.app.run()
 
         # --- Load in a map from the tiled editor ---
 
